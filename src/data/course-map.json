@@ -1,9 +1,43 @@
 {
   "nodes": [
-    { "id": "16A", "label": "EECS 16A", "category": "required", "link": "/courses/eecs16a" },
-    { "id": "120", "label": "EE 120", "category": "signals", "link": "/courses/ee120" }
+    { "id": "math_phys", "label": "Math & Physics (MIT 18.xx/8.xx)", "category": "required", "link": "/courses/math-phys" },
+    { "id": "cs50", "label": "CS50x", "category": "core", "link": "/courses/cs50" },
+    { "id": "61a", "label": "CS 61A", "category": "core", "link": "/courses/cs61a" },
+    { "id": "61b", "label": "CS 61B", "category": "core", "link": "/courses/cs61b" },
+    { "id": "61c", "label": "CS 61C & CSAPP", "category": "core", "link": "/courses/cs61c" },
+    { "id": "cs70", "label": "CS 70 & MIT 6.041", "category": "core", "link": "/courses/cs70" },
+    { "id": "16a", "label": "EECS 16A", "category": "required", "link": "/courses/eecs16a" },
+    { "id": "16b", "label": "EECS 16B", "category": "required", "link": "/courses/eecs16b" },
+    { "id": "170", "label": "CS 170 (Algorithms)", "category": "theory", "link": "/courses/cs170" },
+    { "id": "os", "label": "jyyOS (CS 162 equiv.)", "category": "software", "link": "/courses/os" },
+    { "id": "168", "label": "CS 168 (Networks)", "category": "software", "link": "/courses/cs168" },
+    { "id": "db", "label": "CMU 15-445 (Databases)", "category": "applications", "link": "/courses/15-445" },
+    { "id": "tools", "label": "Missing Sem & Gen SE", "category": "software", "link": "/courses/tools" },
+    { "id": "analog", "label": "SJTU Analog Circuits", "category": "circuits", "link": "/courses/analog" },
+    { "id": "digital", "label": "THU Digital Circuits", "category": "hardware", "link": "/courses/digital" },
+    { "id": "signals", "label": "MIT Signals & Systems", "category": "signals", "link": "/courses/signals" },
+    { "id": "149", "label": "EECS 149 (Embedded)", "category": "robotics", "link": "/courses/eecs149" }
   ],
   "edges": [
-    { "source": "16A", "target": "120", "type": "recommended" }
+    { "source": "math_phys", "target": "16a", "type": "required" },
+    { "source": "cs50", "target": "61a", "type": "recommended" },
+    { "source": "61a", "target": "61b", "type": "required" },
+    { "source": "61b", "target": "61c", "type": "required" },
+    { "source": "61b", "target": "cs70", "type": "recommended" },
+    { "source": "61b", "target": "170", "type": "required" },
+    { "source": "cs70", "target": "170", "type": "required" },
+    { "source": "61b", "target": "db", "type": "required" },
+    { "source": "61b", "target": "168", "type": "required" },
+    { "source": "61c", "target": "os", "type": "required" },
+    { "source": "61c", "target": "168", "type": "recommended" },
+    { "source": "16a", "target": "16b", "type": "required" },
+    { "source": "16b", "target": "signals", "type": "required" },
+    { "source": "16b", "target": "analog", "type": "required" },
+    { "source": "16b", "target": "digital", "type": "recommended" },
+    { "source": "61c", "target": "digital", "type": "required" },
+    { "source": "16b", "target": "149", "type": "required" },
+    { "source": "61c", "target": "149", "type": "required" },
+    { "source": "signals", "target": "149", "type": "recommended" },
+    { "source": "tools", "target": "os", "type": "recommended" }
   ]
 }
