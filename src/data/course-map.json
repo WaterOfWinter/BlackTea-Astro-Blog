@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    { "id": "16A", "label": "EECS 16A", "category": "required", "link": "/courses/eecs16a" },
+    { "id": "120", "label": "EE 120", "category": "signals", "link": "/courses/ee120" }
+  ],
+  "edges": [
+    { "source": "16A", "target": "120", "type": "recommended" }
+  ]
+}
